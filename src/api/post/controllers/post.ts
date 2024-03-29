@@ -2,6 +2,23 @@
  * post controller
  */
 
-import { factories } from '@strapi/strapi'
+import {factories} from '@strapi/strapi'
 
 export default factories.createCoreController('api::post.post');
+
+module.exports = factories.createCoreController('api::post.post', ({strapi}) => ({
+  async findOne(ctx) {
+    const {id: slug} = ctx.params;
+    const {query} = ctx;
+    if (!query.filters) { // @ts-ignore
+      query.filters = {}
+    }
+    // @ts-ignore
+    query.filters.slug = {'$eq': slug}
+    const entity = await strapi.service('api::post.post').find(query);
+    // @ts-ignore
+    const {results} = await this.sanitizeOutput(entity, ctx);
+
+    return this.transformResponse(results[0]);
+  }
+}))
