@@ -26,11 +26,6 @@
       "type": "uid",
       "required": true
     },
-    "tags": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::tag.tag"
-    },
     "thumbnail": {
       "type": "media",
       "multiple": false,
@@ -41,6 +36,11 @@
     },
     "content": {
       "type": "richtext"
+    },
+    "tags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "tag.tag"
     }
   }
 }

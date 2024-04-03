@@ -8,7 +8,7 @@ export default [
         useDefaults: true,
         directives: {
           "script-src": ["'self'", "*.tinymce.com", "*.tiny.cloud", "https:"],
-          "connect-src": ["'self'", "*.tinymce.com", "*.tiny.cloud", "blob:", "*.strapi.io"],
+          "connect-src": ["'self'", "*.tinymce.com", "*.tiny.cloud", "blob:", "*.strapi.io", 'https:'],
           "img-src": [
             "'self'",
             "*.tinymce.com",
@@ -19,6 +19,8 @@ export default [
             "strapi.io",
             "s3.amazonaws.com",
             "cdn.jsdelivr.net",
+            'market-assets.strapi.io',
+            'res.cloudinary.com'
           ],
           "style-src": [
             "'self'",
@@ -27,6 +29,13 @@ export default [
             "*.tiny.cloud",
           ],
           "font-src": ["'self'", "*.tinymce.com", "*.tiny.cloud"],
+          'media-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'market-assets.strapi.io',
+            'res.cloudinary.com',
+          ],
         },
         upgradeInsecureRequests: null,
       },

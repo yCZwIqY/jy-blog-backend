@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "projectName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "projectSummary": {
+      "type": "text"
+    },
+    "resource": {
+      "type": "component",
+      "repeatable": true,
+      "component": "project.project-resource"
+    },
+    "skill": {
+      "type": "component",
+      "repeatable": true,
+      "component": "tag.tag"
+    },
+    "memberNum": {
+      "type": "integer"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    }
+  }
+}
