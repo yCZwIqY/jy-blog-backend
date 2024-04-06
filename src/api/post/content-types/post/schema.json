@@ -23,8 +23,7 @@
       "maxLength": 100
     },
     "slug": {
-      "type": "uid",
-      "required": true
+      "type": "string"
     },
     "thumbnail": {
       "type": "media",

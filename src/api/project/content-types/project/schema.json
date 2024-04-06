@@ -20,11 +20,6 @@
     "projectSummary": {
       "type": "text"
     },
-    "resource": {
-      "type": "component",
-      "repeatable": true,
-      "component": "project.project-resource"
-    },
     "skill": {
       "type": "component",
       "repeatable": true,
@@ -38,6 +33,49 @@
     },
     "endDate": {
       "type": "date"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "githubLink": {
+      "type": "string"
+    },
+    "demoLink": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "detail": {
+      "type": "text"
+    },
+    "features": {
+      "displayName": "Key Features",
+      "type": "component",
+      "repeatable": true,
+      "component": "project.key-features"
+    },
+    "projectIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "contribution": {
+      "type": "string"
     }
   }
 }
