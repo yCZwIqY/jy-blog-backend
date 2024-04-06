@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_project_key_features",
+  "info": {
+    "displayName": "Key Features",
+    "icon": "lightbulb",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "featuresLabel": {
+      "type": "text"
+    }
+  }
+}
