@@ -15,12 +15,12 @@
     "title": {
       "type": "string",
       "required": true,
-      "maxLength": 30,
+      "maxLength": 80,
       "minLength": 1
     },
     "summary": {
       "type": "string",
-      "maxLength": 100
+      "maxLength": 250
     },
     "slug": {
       "type": "string"
