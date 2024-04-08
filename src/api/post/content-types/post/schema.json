@@ -40,7 +40,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::tag.tag",
-      "mappedBy": "posts"
+      "inversedBy": "posts"
     }
   }
 }
