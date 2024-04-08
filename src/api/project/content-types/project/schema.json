@@ -20,11 +20,6 @@
     "projectSummary": {
       "type": "text"
     },
-    "skill": {
-      "type": "component",
-      "repeatable": true,
-      "component": "tag.tag"
-    },
     "memberNum": {
       "type": "integer"
     },
@@ -76,6 +71,12 @@
     },
     "contribution": {
       "type": "string"
+    },
+    "skills": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "projects"
     }
   }
 }

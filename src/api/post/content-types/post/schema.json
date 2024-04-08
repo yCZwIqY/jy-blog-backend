@@ -37,9 +37,10 @@
       "type": "richtext"
     },
     "tags": {
-      "type": "component",
-      "repeatable": true,
-      "component": "tag.tag"
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "posts"
     }
   }
 }
