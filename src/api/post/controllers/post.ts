@@ -18,7 +18,15 @@ module.exports = factories.createCoreController('api::post.post', ({strapi}) => 
     const entity = await strapi.service('api::post.post').find(query);
     // @ts-ignore
     const {results} = await this.sanitizeOutput(entity, ctx);
+    console.log(parseInt(results[0].views) + 1)
+
+    await strapi.entityService.update('api::post.post', results[0].id, {
+      data: {
+        // @ts-ignore
+        views: parseInt(results[0].views) + 1
+      }
+    })
 
     return this.transformResponse(results[0]);
-  }
-}))
+  },
+}));

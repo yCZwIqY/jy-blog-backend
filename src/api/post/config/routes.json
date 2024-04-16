@@ -1,0 +1,5 @@
+{
+  "method": "PATCH",
+  "path": "/posts/:slug/view",
+  "handler": "post.logView"
+}
