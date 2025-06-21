@@ -48,4 +48,5 @@ export default [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
+  './src/middlewares/response-transformer',
 ];
